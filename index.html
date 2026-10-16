@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uddalok Bhattacharya</title>
+  <meta name="description" content="Personal portfolio of Uddalok Bhattacharya, video editor crafting digital stories and cinematic edits that move revenue.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/avatar.svg">
+
+  <!-- Typography: Plus Jakarta Sans & JetBrains Mono matching reference -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=10">
+</head>
+<body>
+
+  <!-- Ambient Top Glow -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- FIXED HEADER CAPSULE (Strictly matching media_1792084312946.png) -->
+  <header class="header-fixed-wrap">
+    <div id="main-nav-capsule" class="main-nav-capsule">
+      
+      <!-- Brand Name Left (No Editor badge) -->
+      <a id="nav-logo-link" href="#hero" class="nav-logo-link" aria-label="Uddalok Bhattacharya Home">
+        <span class="nav-brand-text">Uddalok Bhattacharya</span>
+      </a>
+
+      <!-- Center Nav Links: Intro, About, Services, Work, Contact -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <button type="button" class="nav-btn-link active" data-section="hero">Intro</button>
+        <button type="button" class="nav-btn-link" data-section="about">About</button>
+        <button type="button" class="nav-btn-link" data-section="services">Services</button>
+        <button type="button" class="nav-btn-link" data-section="work">Work</button>
+        <button type="button" class="nav-btn-link" data-section="contact">Contact</button>
+      </nav>
+
+      <!-- Right: Vintage Hardware Skeuomorphic Switch Button -->
+      <div class="switch-right-wrap">
+        <button 
+          id="nav-vintage-toggle-btn" 
+          class="nav-vintage-toggle-btn" 
+          type="button" 
+          role="switch" 
+          aria-checked="false" 
+          aria-label="Vintage toggle switch: currently in Dark mode. Click to toggle to Royal Purple mode."
+          title="Flip switch to Day / Purple Mode"
+        >
+          <svg id="vintageSwitchSvg" viewBox="0 0 68 28" class="vintage-switch-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <!-- Dark Plate Linear Gradient -->
+              <linearGradient id="vintagePlateDark" x1="0" y1="0" x2="68" y2="28" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#32302C"/>
+                <stop offset="35%" stop-color="#22211E"/>
+                <stop offset="70%" stop-color="#1C1B19"/>
+                <stop offset="100%" stop-color="#151413"/>
+              </linearGradient>
+
+              <!-- Purple Theme Plate Gradient -->
+              <linearGradient id="vintagePlatePurple" x1="0" y1="0" x2="68" y2="28" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#4C1D95"/>
+                <stop offset="30%" stop-color="#3B1578"/>
+                <stop offset="70%" stop-color="#290E52"/>
+                <stop offset="100%" stop-color="#1C0938"/>
+              </linearGradient>
+
+              <!-- Rim Highlight Dark -->
+              <linearGradient id="rimHighlightDark" x1="0" y1="0" x2="0" y2="28" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#57544C"/>
+                <stop offset="50%" stop-color="#2E2C28"/>
+                <stop offset="100%" stop-color="#0E0D0C"/>
+              </linearGradient>
+
+              <!-- Rim Highlight Purple -->
+              <linearGradient id="rimHighlightPurple" x1="0" y1="0" x2="0" y2="28" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#C084FC"/>
+                <stop offset="50%" stop-color="#7E22CE"/>
+                <stop offset="100%" stop-color="#3B0764"/>
+              </linearGradient>
+
+              <!-- Cavity Recessed Slot Shadow -->
+              <linearGradient id="cavityShadow" x1="0" y1="0" x2="0" y2="14" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#080807" stop-opacity="0.95"/>
+                <stop offset="60%" stop-color="#131211" stop-opacity="0.85"/>
+                <stop offset="100%" stop-color="#21201D" stop-opacity="0.6"/>
+              </linearGradient>
+
+              <!-- Lever Baton Metallic Gradient Dark -->
+              <linearGradient id="leverBatonDark" x1="0" y1="0" x2="14" y2="14" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#F5F4F0"/>
+                <stop offset="25%" stop-color="#D5D2C8"/>
+                <stop offset="55%" stop-color="#8C887E"/>
+                <stop offset="85%" stop-color="#57544C"/>
+                <stop offset="100%" stop-color="#3A3833"/>
+              </linearGradient>
+
+              <!-- Lever Baton Metallic Gradient Active / Light -->
+              <linearGradient id="leverBatonLight" x1="0" y1="0" x2="14" y2="14" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FFF9E6"/>
+                <stop offset="30%" stop-color="#F5D77F"/>
+                <stop offset="70%" stop-color="#D4A738"/>
+                <stop offset="100%" stop-color="#99701E"/>
+              </linearGradient>
+
+              <!-- Pilot Bulb Amber Light ON -->
+              <radialGradient id="pilotBulbOn" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+                <stop offset="25%" stop-color="#FEF3C7" stop-opacity="1"/>
+                <stop offset="65%" stop-color="#F59E0B" stop-opacity="0.95"/>
+                <stop offset="90%" stop-color="#D97706" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#92400E" stop-opacity="0.8"/>
+              </radialGradient>
+
+              <!-- Pilot Bulb Dim OFF -->
+              <radialGradient id="pilotBulbOff" cx="40%" cy="40%" r="50%">
+                <stop offset="0%" stop-color="#78350F" stop-opacity="0.6"/>
+                <stop offset="60%" stop-color="#451A03" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#1A0B02" stop-opacity="0.9"/>
+              </radialGradient>
+
+              <!-- Pilot Bulb Ambient Optical Glow -->
+              <filter id="pilotGlow" x="-60%" y="-60%" width="220%" height="220%">
+                <feGaussianBlur stdDeviation="2" result="blur"/>
+                <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+              </filter>
+            </defs>
+
+            <!-- Face Plate -->
+            <rect class="switch-plate" x="1" y="1" width="66" height="26" rx="13" fill="url(#vintagePlateDark)" stroke="url(#rimHighlightDark)" stroke-width="1.2"/>
+            <rect class="switch-inner-rim" x="2.6" y="2.6" width="62.8" height="22.8" rx="11.4" fill="none" stroke="#2A2825" stroke-width="0.6" stroke-dasharray="100" opacity="0.8"/>
+
+            <!-- Left Screw Rivet -->
+            <g transform="translate(7.5, 14)">
+              <circle cx="0" cy="0" r="1.9" fill="#2C2A26" stroke="#141413" stroke-width="0.4"/>
+              <line x1="-1.3" y1="-0.7" x2="1.3" y2="0.7" stroke="#0D0D0C" stroke-width="0.5" stroke-linecap="round"/>
+            </g>
+
+            <!-- Right Screw Rivet -->
+            <g transform="translate(60.5, 14)">
+              <circle cx="0" cy="0" r="1.9" fill="#2C2A26" stroke="#141413" stroke-width="0.4"/>
+              <line x1="-1.2" y1="0.9" x2="1.2" y2="-0.9" stroke="#0D0D0C" stroke-width="0.5" stroke-linecap="round"/>
+            </g>
+
+            <!-- Recessed Cavity Slot -->
+            <g transform="translate(13.5, 7)">
+              <rect class="switch-cavity-rim" x="0" y="0" width="41" height="14" rx="7" fill="#151413" stroke="#33312C" stroke-width="0.8"/>
+              <rect x="1" y="1" width="39" height="12" rx="6" fill="url(#cavityShadow)"/>
+            </g>
+
+            <!-- Pilot LED Indicator -->
+            <g transform="translate(34, 4)">
+              <circle cx="0" cy="0" r="2.2" fill="#3D3B36" stroke="#262522" stroke-width="0.4"/>
+              <circle class="pilot-gem" cx="0" cy="0" r="1.6" fill="url(#pilotBulbOff)"/>
+              <circle cx="-0.4" cy="-0.4" r="0.5" fill="#FFFFFF" opacity="0.3"/>
+            </g>
+
+            <!-- Mechanical Lever Group (Spring physics between x:25 and x:43) -->
+            <g id="switchLeverG" class="switch-lever-group">
+              <!-- Shadow below lever knob -->
+              <ellipse cx="2.5" cy="15.5" rx="4.8" ry="3" fill="#000000" opacity="0.45"/>
+              <!-- Base Bezel Rings -->
+              <circle cx="0" cy="14" r="5.5" fill="#2D2B27" stroke="#4D4A43" stroke-width="0.7"/>
+              <circle cx="0" cy="14" r="4" fill="#1A1917"/>
+
+              <!-- Tilting Baton & Head -->
+              <g class="baton-lever-tilt">
+                <path d="M -1.8 14 L -1.1 6.8 L 1.1 6.8 L 1.8 14 Z" fill="url(#leverBatonDark)" stroke="#33312C" stroke-width="0.35"/>
+                <circle cx="0" cy="5.5" r="3.5" fill="url(#leverBatonDark)" stroke="#A3A199" stroke-width="0.45"/>
+                <ellipse cx="-1" cy="4.5" rx="1.1" ry="1.6" transform="rotate(-25 -1 4.5)" fill="#FFFFFF" opacity="0.75"/>
+                <line x1="-2" y1="5.5" x2="2" y2="5.5" stroke="#2E2D2A" stroke-width="0.35" opacity="0.7"/>
+                <line x1="-1.6" y1="6.5" x2="1.6" y2="6.5" stroke="#2E2D2A" stroke-width="0.35" opacity="0.7"/>
+              </g>
+            </g>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT CONTAINER -->
+  <main class="page-container">
+
+    <!-- HERO SECTION (Strictly matching media_1792084356404.png) -->
+    <section class="hero-section" id="hero">
+      <div class="hero-grid">
+
+        <!-- Left Column: Greeting & Exact Headline -->
+        <div class="hero-content-col">
+          <!-- Greeting line: Multilingual typewriter with amber cursor -->
+          <div class="hero-greeting-heading">
+            <span id="multilingualGreeting">Hei</span>
+            <span class="hero-cursor-line" aria-hidden="true"></span>
+          </div>
+
+          <!-- Headline matching media_1792084356404.png exact font, size (36px), leading (42px) and underlines -->
+          <p class="hero-headline">
+            I'm a video editor crafting <span class="hero-underline">digital stories</span> and <span class="hero-underline">cinematic edits</span> that move revenue.
+          </p>
+
+        </div>
+
+        <!-- Right Column: Avatar & Location Badge -->
+        <div class="hero-avatar-col" id="heroAvatarCol">
+          <div class="avatar-container" id="interactiveAvatar" role="button" tabindex="0" aria-label="Interactive illustration of Uddalok Bhattacharya">
+            <img id="heroAvatarImg" class="hero-avatar-image" src="assets/avatar_normal.png" alt="Illustration of Uddalok Bhattacharya">
+          </div>
+
+          <!-- Status text below human: matching media_1792084910945.png -->
+          <div class="hero-status-text" id="statusText">
+            WB, IND · IST 10:31 PM · RESTING
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION (Matching media_1792086237942.png) -->
+    <section class="about-section" id="about">
+      <div class="about-top-row">
+        <div>
+          <h2 class="about-title">About</h2>
+        </div>
+        <a href="#contact" class="about-link">
+          <span>View Experience</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <p class="about-bio-text" id="about-bio-statement">
+        I'm Uddalok Bhattacharya, a video editor with 1 year of experience and a passion for turning raw footage into engaging visual stories. My journey started with editing videos for fun, and that curiosity gradually grew into a deeper interest in storytelling, transitions, sound design, and visual creativity. I'm always fascinated by how things are created and how small details can transform an ordinary video into something memorable. With my unique editing perspective, I aim to create content that not only looks good but also connects with its audience. For me, every project is an opportunity to experiment, improve, and bring a fresh creative vision to life.
+      </p>
+
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">1+ Yrs</div>
+          <div class="stat-label">Video Editing &amp; Storytelling</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Reels &amp; Projects Delivered</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">1M+</div>
+          <div class="stat-label">Audience Reach Generated</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">4K / 9:16</div>
+          <div class="stat-label">Color Grade &amp; Sound Mix</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION (Exact style as Work section, showing 2 services with "View more ↗") -->
+    <section class="section-wrapper" id="services">
+      <!-- Header row: "Services" on left, "View more ↗" on right -->
+      <div class="work-header-row">
+        <h2 class="work-title-lg">Services</h2>
+        <a href="services.html" class="work-view-all-link" id="services-view-more-link">
+          <span>View more</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"/>
+            <polyline points="7 7 17 7 17 17"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- 2-Column Services Grid (First two services shown) -->
+      <div class="services-two-col-grid">
+        <!-- Service 1: YouTube video editing -->
+        <article class="service-card">
+          <div class="service-media-wrap">
+            <svg viewBox="0 0 520 320" class="service-canvas-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="520" height="320" fill="#151413"/>
+              <path d="M 0 80 L 520 80 M 0 160 L 520 160 M 0 240 L 520 240 M 130 0 L 130 320 M 260 0 L 260 320 M 390 0 L 390 320" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+              
+              <!-- Video Player Window Frame -->
+              <g transform="translate(60, 36)">
+                <rect x="0" y="0" width="400" height="170" rx="10" fill="#1C1B19" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1.2"/>
+                <rect x="8" y="8" width="384" height="154" rx="6" fill="#0D0D0C"/>
+                <polygon points="190,70 216,85 190,100" fill="rgba(255, 255, 255, 0.25)"/>
+                <rect x="24" y="20" width="352" height="130" fill="none" stroke="rgba(255, 255, 255, 0.05)" stroke-dasharray="4 4"/>
+              </g>
+
+              <!-- Video Editing Multi-Track Timeline -->
+              <g transform="translate(60, 222)">
+                <rect x="0" y="0" width="400" height="66" rx="8" fill="#1A1917" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+                <rect x="12" y="10" width="70" height="18" rx="4" fill="#3D3220" stroke="#785A28" stroke-width="0.8"/>
+                <rect x="86" y="10" width="110" height="18" rx="4" fill="#2E281F" stroke="#5E4E30" stroke-width="0.8"/>
+                <rect x="200" y="10" width="60" height="18" rx="4" fill="#3D3220" stroke="#785A28" stroke-width="0.8"/>
+                <rect x="264" y="10" width="124" height="18" rx="4" fill="#2E281F" stroke="#5E4E30" stroke-width="0.8"/>
+                <rect x="12" y="34" width="140" height="20" rx="4" fill="#1E2824" stroke="#2D4D3E" stroke-width="0.8"/>
+                <rect x="156" y="34" width="232" height="20" rx="4" fill="#1E2824" stroke="#2D4D3E" stroke-width="0.8"/>
+                <path d="M 22 44 L 28 40 L 34 47 L 40 41 L 46 46 L 52 38 L 58 48 L 64 42 L 70 45 L 80 39 L 90 46 L 100 42 L 110 47 L 120 40 L 130 45 M 166 44 L 174 38 L 182 48 L 190 41 L 200 47 L 210 39 L 220 46 L 230 42 L 240 48 L 250 40 L 260 45 L 270 41 L 280 47 L 290 39 L 300 45" stroke="rgba(52, 211, 153, 0.45)" stroke-width="1.2" stroke-linecap="round"/>
+                <line x1="172" y1="-4" x2="172" y2="70" stroke="#F59E0B" stroke-width="1.8"/>
+                <polygon points="167,-4 177,-4 172,4" fill="#F59E0B"/>
+              </g>
+            </svg>
+          </div>
+          <div class="service-info">
+            <h3 class="service-title">YouTube Video Editing</h3>
+            <p class="service-desc">
+              Retention-optimized editing crafted for modern creator channels. Dynamic pacing, narrative structure, custom B-roll integration, and clean motion typography that maximize average view duration.
+            </p>
+          </div>
+        </article>
+
+        <!-- Service 2: Instagram Reels and Shorts -->
+        <article class="service-card">
+          <div class="service-media-wrap">
+            <svg viewBox="0 0 520 320" class="service-canvas-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="520" height="320" fill="#151413"/>
+              <circle cx="260" cy="160" r="140" fill="url(#reelGlowIndex)" opacity="0.3"/>
+              <defs>
+                <radialGradient id="reelGlowIndex" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.4"/>
+                  <stop offset="100%" stop-color="#151413" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              
+              <!-- Centered 9:16 Vertical Smartphone Viewport Frame -->
+              <g transform="translate(195, 24)">
+                <rect x="0" y="0" width="130" height="272" rx="22" fill="#1A1917" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.4"/>
+                <rect x="6" y="6" width="118" height="260" rx="18" fill="#0D0D0C"/>
+                <rect x="42" y="12" width="46" height="8" rx="4" fill="#1E1D1B"/>
+                
+                <!-- Animated Captions Representation in Center -->
+                <rect x="18" y="110" width="94" height="12" rx="3" fill="rgba(255, 255, 255, 0.15)"/>
+                <rect x="28" y="128" width="74" height="12" rx="3" fill="#F59E0B" opacity="0.85"/>
+                <rect x="22" y="146" width="86" height="10" rx="3" fill="rgba(255, 255, 255, 0.1)"/>
+
+                <!-- Audio waveform pulse at bottom -->
+                <path d="M 20 226 L 25 218 L 30 232 L 35 222 L 40 228 L 45 214 L 50 234 L 55 220 L 60 228 L 65 216 L 70 230 L 75 222 L 80 234 L 85 218 L 90 228 L 95 220 L 100 230 L 105 224 L 110 228" stroke="rgba(129, 140, 248, 0.7)" stroke-width="1.4" stroke-linecap="round"/>
+
+                <!-- Bottom Progress Bar -->
+                <line x1="14" y1="250" x2="116" y2="250" stroke="rgba(255, 255, 255, 0.12)" stroke-width="2"/>
+                <line x1="14" y1="250" x2="68" y2="250" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+              </g>
+
+              <path d="M 140 100 A 70 70 0 0 0 140 220" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1" stroke-dasharray="3 3"/>
+              <path d="M 120 80 A 95 95 0 0 0 120 240" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1" stroke-dasharray="4 4"/>
+              <path d="M 380 100 A 70 70 0 0 1 380 220" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1" stroke-dasharray="3 3"/>
+              <path d="M 400 80 A 95 95 0 0 1 400 240" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1" stroke-dasharray="4 4"/>
+            </svg>
+          </div>
+          <div class="service-info">
+            <h3 class="service-title">Instagram Reels &amp; Shorts</h3>
+            <p class="service-desc">
+              Fast-paced, hook-driven vertical content tailored for viral algorithms. Kinetic subtitles, velocity curves, screen punches, and trending audio synchronization that turn casual scrollers into engaged followers.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- WORK / FEATURE SHOWCASE (Exact style from media_1792088355659.png) -->
+    <section class="section-wrapper" id="work">
+      <!-- Header row: "Work" on left, "View all ↗" on right -->
+      <div class="work-header-row">
+        <h2 class="work-title-lg">Work</h2>
+        <a href="work.html" class="work-view-all-link" id="work-view-all-link">
+          <span>View all</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"/>
+            <polyline points="7 7 17 7 17 17"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- 2-Column Large Feature Grid -->
+      <div class="work-two-col-grid">
+        <!-- Feature Card 1: illuMax -->
+        <article 
+          class="work-feature-card" 
+          data-type="videos"
+          data-video-src="https://cdn.videotourl.net/videos/41e1b2f5-99df-413c-874e-3e2107038fc5.mp4"
+          tabindex="0"
+          role="button"
+          aria-label="View project: illuMax — Wolverine Motivation & Creator Edit"
+        >
+          <div class="work-feature-media-wrap">
+            <video 
+              src="https://cdn.videotourl.net/videos/41e1b2f5-99df-413c-874e-3e2107038fc5.mp4" 
+              poster="assets/images/work_illumax.jpg"
+              loop muted playsinline preload="metadata" 
+              class="project-preview-video"
+            ></video>
+            <div class="project-play-hover-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+
+          <div class="work-feature-info">
+            <h3 class="work-feature-title">illuMax — Wolverine Motivation &amp; Creator Edit</h3>
+            <p class="work-feature-desc">
+              High-energy 16:9 YouTube creator edit featuring custom kinetic typography, character motion tracking, sound design stingers, and retention-engineered pacing.
+            </p>
+          </div>
+        </article>
+
+        <!-- Feature Card 2: Color Grading & Visual Polish -->
+        <article 
+          class="work-feature-card" 
+          data-type="shorts"
+          data-video-src="https://cdn.videotourl.net/videos/48e965f0-56ac-4ee9-a658-adea149fd64b.mp4"
+          tabindex="0"
+          role="button"
+          aria-label="View project: Color Grading & Visual Polish — Before vs After"
+        >
+          <div class="work-feature-media-wrap">
+            <video 
+              src="https://cdn.videotourl.net/videos/48e965f0-56ac-4ee9-a658-adea149fd64b.mp4" 
+              poster="assets/images/work_pf.jpg"
+              loop muted playsinline preload="metadata" 
+              class="project-preview-video"
+            ></video>
+            <div class="project-play-hover-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+
+          <div class="work-feature-info">
+            <h3 class="work-feature-title">Color Grading &amp; Visual Polish — Before vs After</h3>
+            <p class="work-feature-desc">
+              Professional DaVinci Resolve color transformation, studio lighting correction, skin tone recovery, and high-impact visual enhancement.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Bottom Callout Banner matching media_1792088355659.png -->
+      <div class="work-cta-banner">
+        <div class="work-cta-text">
+          <h4 class="work-cta-heading">Looking for deeper confidential artifacts or end-to-end design system teardowns?</h4>
+          <p class="work-cta-sub">Let's connect!</p>
+        </div>
+        <a href="#contact" class="work-cta-btn">Get in touch</a>
+      </div>
+    </section>
+
+
+    <!-- CONTACT SECTION (Strictly matching media_1792092103157.png) -->
+    <section class="contact-section" id="contact">
+      <h2 class="contact-heading">Contact</h2>
+      
+      <p class="contact-subheading">
+        Available for select creator series, commercial projects, and high-retention video campaigns.
+      </p>
+
+      <!-- Email with underline & copy icon -->
+      <div class="contact-email-wrap">
+        <a href="mailto:workxuddalok@gmail.com" class="contact-email-text" id="contactEmailLink">workxuddalok@gmail.com</a>
+        <button type="button" class="contact-copy-btn" id="copyEmailBtn" aria-label="Copy email address" title="Copy email address">
+          <svg class="copy-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <span class="copy-tooltip" id="copyTooltip">Copied!</span>
+        </button>
+      </div>
+
+      <!-- EXPLORE MORE Links with Instagram and Discord -->
+      <div class="contact-explore-block">
+        <div class="contact-explore-tag">EXPLORE MORE</div>
+        <div class="contact-explore-links">
+          <a href="https://www.instagram.com/uddalok.visual?cplk=eTN4bXk4YTQwbHVj" class="explore-nav-link" id="exploreInstagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://discord.com/users/uddalok.visual" class="explore-nav-link" id="exploreDiscord" target="_blank" rel="noopener noreferrer">Discord</a>
+        </div>
+      </div>
+
+      <!-- Subtle Full-Width Divider -->
+      <div class="contact-bottom-divider"></div>
+
+      <!-- Bottom Footer: Copyright on left, Back to top on right -->
+      <div class="contact-footer-row">
+        <div class="contact-copyright-text">
+          &copy; 2026 Uddalok Bhattacharya &middot; All rights reserved.
+        </div>
+        <button type="button" class="back-to-top-capsule" id="backToTopBtn" aria-label="Back to top">
+          <span>Back to top</span>
+          <span class="back-to-top-arrow">&uarr;</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- REEL VIDEO MODAL -->
+  <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Video Player Modal">
+    <div class="modal-content" id="modalContentBox">
+      <button class="close-modal-btn" id="closeModalBtn" aria-label="Close modal">✕</button>
+      <video id="modalVideoPlayer" controls playsinline class="modal-video-player" style="display: none;"></video>
+      <iframe id="modalIframePlayer" class="modal-iframe-player" src="" allow="autoplay; fullscreen" allowfullscreen style="display: none;"></iframe>
+      <div class="modal-footer-bar" id="modalFooterBar">
+        <a id="modalDriveLink" href="#" target="_blank" rel="noopener noreferrer" class="modal-drive-action-btn">
+          <span>Watch Original on Google Drive</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="7 7 17 7 17 17"/><line x1="17" y1="7" x2="7" y2="17"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js?v=10"></script>
+</body>
+</html>

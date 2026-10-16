@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 380" fill="none" class="avatar-svg">
+  <defs>
+    <!-- Subtle gradients for realistic vector depth -->
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DEB196"/>
+      <stop offset="100%" stop-color="#C79679"/>
+    </linearGradient>
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1C1A"/>
+      <stop offset="100%" stop-color="#121110"/>
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1C1B19"/>
+      <stop offset="100%" stop-color="#121110"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Body / Torso -->
+  <g id="body">
+    <!-- Arms / Biceps extending outward -->
+    <path d="M 64 248 C 64 235 78 220 95 212 L 225 212 C 242 220 256 235 256 248 L 268 290 L 260 300 L 250 300 L 246 265 L 74 265 L 70 300 L 60 300 L 52 290 Z" fill="#D3A589"/>
+    
+    <!-- Exposed arm skin under sleeve -->
+    <path d="M 54 280 L 72 278 L 74 308 L 52 308 Z" fill="#C9987B"/>
+    <path d="M 266 280 L 248 278 L 246 308 L 268 308 Z" fill="#C9987B"/>
+
+    <!-- T-Shirt Body -->
+    <path d="M 92 215 C 80 220 68 235 66 260 L 64 330 C 64 340 70 345 80 345 L 240 345 C 250 345 256 340 256 330 L 254 260 C 252 235 240 220 228 215 C 218 228 190 236 160 236 C 130 236 102 228 92 215 Z" fill="url(#shirtGrad)"/>
+    
+    <!-- Left Sleeve Trim -->
+    <path d="M 66 260 L 98 254 L 96 270 L 64 274 Z" fill="#141312"/>
+    <!-- Right Sleeve Trim -->
+    <path d="M 254 260 L 222 254 L 224 270 L 256 274 Z" fill="#141312"/>
+
+    <!-- T-shirt crew neck collar line -->
+    <path d="M 125 198 C 135 218 185 218 195 198 C 185 212 135 212 125 198 Z" fill="#0C0B0A"/>
+  </g>
+
+  <!-- Neck -->
+  <g id="neck">
+    <path d="M 132 170 L 132 208 C 142 214 178 214 188 208 L 188 170 Z" fill="url(#skinGrad)"/>
+    <!-- Neck shadow under jaw -->
+    <path d="M 132 170 C 145 186 175 186 188 170 L 188 180 C 175 195 145 195 132 180 Z" fill="#B78265"/>
+  </g>
+
+  <!-- Head Base & Ears -->
+  <g id="head-base">
+    <!-- Left Ear -->
+    <path d="M 112 130 C 104 130 102 142 102 150 C 102 158 106 166 114 166 L 116 142 Z" fill="#D3A387"/>
+    <path d="M 108 140 C 105 144 105 152 109 156" stroke="#9E6B50" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Right Ear -->
+    <path d="M 208 130 C 216 130 218 142 218 150 C 218 158 214 166 206 166 L 204 142 Z" fill="#D3A387"/>
+    <path d="M 212 140 C 215 144 215 152 211 156" stroke="#9E6B50" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Head Face Oval -->
+    <path d="M 114 125 C 114 75 206 75 206 125 C 206 158 200 182 160 184 C 120 182 114 158 114 125 Z" fill="url(#skinGrad)"/>
+  </g>
+
+  <!-- Hair -->
+  <g id="hair">
+    <!-- Sideburns & fade -->
+    <path d="M 114 120 L 114 144 L 119 144 L 120 120 Z" fill="#1C1B19"/>
+    <path d="M 206 120 L 206 144 L 201 144 L 200 120 Z" fill="#1C1B19"/>
+
+    <!-- Full Hair Volume with modern pompadour/side texture -->
+    <path d="M 112 120 C 110 88 120 62 145 56 C 160 52 178 52 195 62 C 210 72 214 96 210 122 C 206 112 200 102 186 96 C 170 90 148 90 134 98 C 124 104 118 112 112 120 Z" fill="url(#hairGrad)"/>
+    
+    <!-- Hair Texture Strands -->
+    <path d="M 132 82 C 146 72 168 70 184 76" stroke="#36332F" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 142 66 C 158 60 174 62 186 68" stroke="#36332F" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 126 94 C 138 88 152 86 166 90" stroke="#36332F" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+
+  <!-- Beard & Mustache -->
+  <g id="beard">
+    <!-- Jawline & Full Trimmed Beard -->
+    <path d="M 114 142 C 114 172 135 190 160 190 C 185 190 206 172 206 142 C 206 156 200 178 186 182 C 172 185 148 185 134 182 C 120 178 114 156 114 142 Z" fill="#181716"/>
+    
+    <!-- Mustache -->
+    <path d="M 140 156 C 148 152 155 153 160 156 C 165 153 172 152 180 156 C 182 162 174 166 160 165 C 146 166 138 162 140 156 Z" fill="#181716"/>
+    
+    <!-- Mouth Line inside beard -->
+    <path d="M 152 170 C 156 172 164 172 168 170" stroke="#DEB196" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Lower Lip / Soul Patch Accent -->
+    <path d="M 157 174 L 163 174 L 160 178 Z" fill="#141312"/>
+  </g>
+
+  <!-- Nose -->
+  <g id="nose">
+    <path d="M 158 126 L 157 142 C 157 146 163 146 163 142 L 162 126" stroke="#B78265" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <circle cx="154" cy="143" r="1.5" fill="#9E6B50"/>
+    <circle cx="166" cy="143" r="1.5" fill="#9E6B50"/>
+  </g>
+
+  <!-- Eyes & Eyebrows -->
+  <g id="eyes">
+    <!-- Eyebrows -->
+    <path d="M 126 116 C 132 112 142 112 148 115" stroke="#181716" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 172 115 C 178 112 188 112 194 116" stroke="#181716" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Left Eye -->
+    <circle cx="138" cy="125" r="4.5" fill="#1A1816"/>
+    <circle cx="139.5" cy="123.5" r="1.5" fill="#FFFFFF"/>
+    
+    <!-- Right Eye -->
+    <circle cx="182" cy="125" r="4.5" fill="#1A1816"/>
+    <circle cx="183.5" cy="123.5" r="1.5" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Modern Glasses (matching the reference styling exactly) -->
+  <g id="glasses">
+    <!-- Left Lens Rim -->
+    <rect x="122" y="112" width="34" height="28" rx="8" ry="8" fill="none" stroke="#141413" stroke-width="4.5"/>
+    <!-- Left Lens Glass Subtle Sheen -->
+    <path d="M 126 116 L 148 116 L 132 136 Z" fill="#FFFFFF" opacity="0.12"/>
+
+    <!-- Right Lens Rim -->
+    <rect x="164" y="112" width="34" height="28" rx="8" ry="8" fill="none" stroke="#141413" stroke-width="4.5"/>
+    <!-- Right Lens Glass Subtle Sheen -->
+    <path d="M 168 116 L 190 116 L 174 136 Z" fill="#FFFFFF" opacity="0.12"/>
+
+    <!-- Bridge Between Lenses -->
+    <path d="M 156 122 C 158 120 162 120 164 122" stroke="#141413" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Glasses Temples / Sidearms -->
+    <path d="M 122 122 L 112 124" stroke="#141413" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 198 122 L 208 124" stroke="#141413" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Subtle Headphone Accent (Editor touch - neck resting or discreet) -->
+  <g id="subtle-editor-touch" opacity="0.85">
+    <!-- Sleek mini audio waveform / timeline pin on collar -->
+    <circle cx="160" cy="226" r="3" fill="#E5983A"/>
+    <rect x="148" y="225" width="24" height="2" rx="1" fill="#E5983A" opacity="0.6"/>
+  </g>
+</svg>

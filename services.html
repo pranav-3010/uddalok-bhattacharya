@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Uddalok Bhattacharya | Video Editor</title>
+  <meta name="description" content="Video editing services offered by Uddalok Bhattacharya: YouTube video editing, Instagram Reels and Shorts, Cinematic edits, Commercial ads, Color grading and sound design.">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=10">
+</head>
+<body>
+
+  <!-- FIXED HEADER CAPSULE -->
+  <header class="header-fixed-wrap">
+    <div id="main-nav-capsule" class="main-nav-capsule">
+      
+      <!-- Brand Logo / Name: Links back to home -->
+      <a id="nav-logo-link" href="index.html" class="nav-logo-link" aria-label="Uddalok Bhattacharya Home">
+        <span class="nav-brand-text">Uddalok Bhattacharya</span>
+      </a>
+
+      <!-- Center Nav Links: "Services" is active capsule -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html#hero" class="nav-btn-link" data-section="hero">Intro</a>
+        <a href="index.html#about" class="nav-btn-link" data-section="about">About</a>
+        <a href="services.html" class="nav-btn-link active">Services</a>
+        <a href="work.html" class="nav-btn-link">Work</a>
+        <a href="index.html#contact" class="nav-btn-link" data-section="contact">Contact</a>
+      </nav>
+
+      <!-- Right: Vintage Hardware Skeuomorphic Switch Button -->
+      <div class="switch-right-wrap">
+        <button 
+          id="nav-vintage-toggle-btn" 
+          class="nav-vintage-toggle-btn" 
+          type="button" 
+          role="switch" 
+          aria-checked="false" 
+          aria-label="Vintage toggle switch: currently in Dark mode. Click to toggle to Royal Purple mode."
+          title="Flip switch to Day / Purple Mode"
+        >
+          <svg id="vintageSwitchSvg" viewBox="0 0 68 28" class="vintage-switch-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="vintagePlateDark" x1="0" y1="0" x2="68" y2="28" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#32302C"/>
+                <stop offset="35%" stop-color="#22211E"/>
+                <stop offset="70%" stop-color="#1C1B19"/>
+                <stop offset="100%" stop-color="#151413"/>
+              </linearGradient>
+
+              <linearGradient id="vintagePlatePurple" x1="0" y1="0" x2="68" y2="28" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#4C1D95"/>
+                <stop offset="30%" stop-color="#3B1578"/>
+                <stop offset="70%" stop-color="#290E52"/>
+                <stop offset="100%" stop-color="#1C0938"/>
+              </linearGradient>
+
+              <linearGradient id="rimHighlightDark" x1="0" y1="0" x2="0" y2="28" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#57544C"/>
+                <stop offset="50%" stop-color="#2E2C28"/>
+                <stop offset="100%" stop-color="#0E0D0C"/>
+              </linearGradient>
+
+              <linearGradient id="rimHighlightPurple" x1="0" y1="0" x2="0" y2="28" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#C084FC"/>
+                <stop offset="50%" stop-color="#7E22CE"/>
+                <stop offset="100%" stop-color="#3B0764"/>
+              </linearGradient>
+
+              <linearGradient id="cavityShadow" x1="0" y1="0" x2="0" y2="14" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#080807" stop-opacity="0.95"/>
+                <stop offset="60%" stop-color="#131211" stop-opacity="0.85"/>
+                <stop offset="100%" stop-color="#21201D" stop-opacity="0.6"/>
+              </linearGradient>
+
+              <linearGradient id="leverBatonDark" x1="0" y1="0" x2="14" y2="14" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#F5F4F0"/>
+                <stop offset="25%" stop-color="#D5D2C8"/>
+                <stop offset="55%" stop-color="#8C887E"/>
+                <stop offset="85%" stop-color="#57544C"/>
+                <stop offset="100%" stop-color="#3A3833"/>
+              </linearGradient>
+
+              <linearGradient id="leverBatonLight" x1="0" y1="0" x2="14" y2="14" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FFF9E6"/>
+                <stop offset="30%" stop-color="#F5D77F"/>
+                <stop offset="70%" stop-color="#D4A738"/>
+                <stop offset="100%" stop-color="#99701E"/>
+              </linearGradient>
+
+              <radialGradient id="pilotBulbOff" cx="40%" cy="40%" r="50%">
+                <stop offset="0%" stop-color="#78350F" stop-opacity="0.6"/>
+                <stop offset="60%" stop-color="#451A03" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#1A0B02" stop-opacity="0.9"/>
+              </radialGradient>
+            </defs>
+
+            <!-- Face Plate -->
+            <rect class="switch-plate" x="1" y="1" width="66" height="26" rx="13" fill="url(#vintagePlateDark)" stroke="url(#rimHighlightDark)" stroke-width="1.2"/>
+            <rect class="switch-inner-rim" x="2.6" y="2.6" width="62.8" height="22.8" rx="11.4" fill="none" stroke="#2A2825" stroke-width="0.6" stroke-dasharray="100" opacity="0.8"/>
+
+            <!-- Left Screw Rivet -->
+            <g transform="translate(7.5, 14)">
+              <circle cx="0" cy="0" r="1.9" fill="#2C2A26" stroke="#141413" stroke-width="0.4"/>
+              <line x1="-1.3" y1="-0.7" x2="1.3" y2="0.7" stroke="#0D0D0C" stroke-width="0.5" stroke-linecap="round"/>
+            </g>
+
+            <!-- Right Screw Rivet -->
+            <g transform="translate(60.5, 14)">
+              <circle cx="0" cy="0" r="1.9" fill="#2C2A26" stroke="#141413" stroke-width="0.4"/>
+              <line x1="-1.2" y1="0.9" x2="1.2" y2="-0.9" stroke="#0D0D0C" stroke-width="0.5" stroke-linecap="round"/>
+            </g>
+
+            <!-- Recessed Cavity Slot -->
+            <g transform="translate(13.5, 7)">
+              <rect class="switch-cavity-rim" x="0" y="0" width="41" height="14" rx="7" fill="#151413" stroke="#33312C" stroke-width="0.8"/>
+              <rect x="1" y="1" width="39" height="12" rx="6" fill="url(#cavityShadow)"/>
+            </g>
+
+            <!-- Pilot LED Indicator -->
+            <g transform="translate(34, 4)">
+              <circle cx="0" cy="0" r="2.2" fill="#3D3B36" stroke="#262522" stroke-width="0.4"/>
+              <circle class="pilot-gem" cx="0" cy="0" r="1.6" fill="url(#pilotBulbOff)"/>
+              <circle cx="-0.4" cy="-0.4" r="0.5" fill="#FFFFFF" opacity="0.3"/>
+            </g>
+
+            <!-- Mechanical Lever Group -->
+            <g id="switchLeverG" class="switch-lever-group">
+              <ellipse cx="2.5" cy="15.5" rx="4.8" ry="3" fill="#000000" opacity="0.45"/>
+              <circle cx="0" cy="14" r="5.5" fill="#2D2B27" stroke="#4D4A43" stroke-width="0.7"/>
+              <circle cx="0" cy="14" r="4" fill="#1A1917"/>
+
+              <g class="baton-lever-tilt">
+                <path d="M -1.8 14 L -1.1 6.8 L 1.1 6.8 L 1.8 14 Z" fill="url(#leverBatonDark)" stroke="#33312C" stroke-width="0.35"/>
+                <circle cx="0" cy="5.5" r="3.5" fill="url(#leverBatonDark)" stroke="#A3A199" stroke-width="0.45"/>
+                <ellipse cx="-1" cy="4.5" rx="1.1" ry="1.6" transform="rotate(-25 -1 4.5)" fill="#FFFFFF" opacity="0.75"/>
+                <line x1="-2" y1="5.5" x2="2" y2="5.5" stroke="#2E2D2A" stroke-width="0.35" opacity="0.7"/>
+                <line x1="-1.6" y1="6.5" x2="1.6" y2="6.5" stroke="#2E2D2A" stroke-width="0.35" opacity="0.7"/>
+              </g>
+            </g>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="page-container" style="padding-top: 100px;">
+
+    <!-- Top Navigation Row: Back Link -->
+    <div class="work-page-nav-row">
+      <a href="index.html" class="back-to-home-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"/>
+          <polyline points="12 19 5 12 12 5"/>
+        </svg>
+        <span>Back to Home</span>
+      </a>
+    </div>
+
+    <!-- Page Title & Header -->
+    <div class="work-page-intro">
+      <h1 class="work-page-title">Services</h1>
+      <p class="work-page-sub">
+        Comprehensive video editing, color grading, and visual post-production crafted for creators, brands, and filmmakers.
+      </p>
+    </div>
+
+    <!-- ======================================================================
+         ALL SERVICES SHOWCASE GRID (Clean, minimal, zero template badges)
+         ====================================================================== -->
+    <div class="services-all-grid">
+
+      <!-- Service 1: YouTube video editing -->
+      <article class="service-card">
+        <div class="service-media-wrap">
+          <svg viewBox="0 0 520 320" class="service-canvas-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Canvas Base -->
+            <rect width="520" height="320" fill="#151413"/>
+            <!-- Subtle Grid Pattern -->
+            <path d="M 0 80 L 520 80 M 0 160 L 520 160 M 0 240 L 520 240 M 130 0 L 130 320 M 260 0 L 260 320 M 390 0 L 390 320" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1"/>
+            
+            <!-- Video Player Window Frame -->
+            <g transform="translate(60, 36)">
+              <rect x="0" y="0" width="400" height="170" rx="10" fill="#1C1B19" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1.2"/>
+              <!-- Video Preview Screen -->
+              <rect x="8" y="8" width="384" height="154" rx="6" fill="#0D0D0C"/>
+              <!-- Play icon silhouette in center -->
+              <polygon points="190,70 216,85 190,100" fill="rgba(255, 255, 255, 0.25)"/>
+              <!-- Safe margin guides -->
+              <rect x="24" y="20" width="352" height="130" fill="none" stroke="rgba(255, 255, 255, 0.05)" stroke-dasharray="4 4"/>
+            </g>
+
+            <!-- Video Editing Multi-Track Timeline -->
+            <g transform="translate(60, 222)">
+              <!-- Timeline Base Container -->
+              <rect x="0" y="0" width="400" height="66" rx="8" fill="#1A1917" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+              
+              <!-- Track 1: Video Track (V1) with cuts -->
+              <rect x="12" y="10" width="70" height="18" rx="4" fill="#3D3220" stroke="#785A28" stroke-width="0.8"/>
+              <rect x="86" y="10" width="110" height="18" rx="4" fill="#2E281F" stroke="#5E4E30" stroke-width="0.8"/>
+              <rect x="200" y="10" width="60" height="18" rx="4" fill="#3D3220" stroke="#785A28" stroke-width="0.8"/>
+              <rect x="264" y="10" width="124" height="18" rx="4" fill="#2E281F" stroke="#5E4E30" stroke-width="0.8"/>
+              
+              <!-- Track 2: Audio Track (A1) with waveform lines -->
+              <rect x="12" y="34" width="140" height="20" rx="4" fill="#1E2824" stroke="#2D4D3E" stroke-width="0.8"/>
+              <rect x="156" y="34" width="232" height="20" rx="4" fill="#1E2824" stroke="#2D4D3E" stroke-width="0.8"/>
+
+              <!-- Audio waveform ripples inside track 2 -->
+              <path d="M 22 44 L 28 40 L 34 47 L 40 41 L 46 46 L 52 38 L 58 48 L 64 42 L 70 45 L 80 39 L 90 46 L 100 42 L 110 47 L 120 40 L 130 45 M 166 44 L 174 38 L 182 48 L 190 41 L 200 47 L 210 39 L 220 46 L 230 42 L 240 48 L 250 40 L 260 45 L 270 41 L 280 47 L 290 39 L 300 45" stroke="rgba(52, 211, 153, 0.45)" stroke-width="1.2" stroke-linecap="round"/>
+
+              <!-- Scrub Playhead Needle -->
+              <line x1="172" y1="-4" x2="172" y2="70" stroke="#F59E0B" stroke-width="1.8"/>
+              <polygon points="167,-4 177,-4 172,4" fill="#F59E0B"/>
+            </g>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3 class="service-title">YouTube Video Editing</h3>
+          <p class="service-desc">
+            Retention-optimized editing crafted for modern creator channels. Dynamic pacing, narrative structure, custom B-roll integration, and clean motion typography that maximize average view duration.
+          </p>
+        </div>
+      </article>
+
+      <!-- Service 2: Instagram Reels and Shorts -->
+      <article class="service-card">
+        <div class="service-media-wrap">
+          <svg viewBox="0 0 520 320" class="service-canvas-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="520" height="320" fill="#151413"/>
+            <!-- Background Radial Glow -->
+            <circle cx="260" cy="160" r="140" fill="url(#reelGlow)" opacity="0.3"/>
+            <defs>
+              <radialGradient id="reelGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="#151413" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            
+            <!-- Centered 9:16 Vertical Smartphone Viewport Frame -->
+            <g transform="translate(195, 24)">
+              <!-- Phone Outer Silhouette -->
+              <rect x="0" y="0" width="130" height="272" rx="22" fill="#1A1917" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.4"/>
+              <!-- Phone Inner Screen -->
+              <rect x="6" y="6" width="118" height="260" rx="18" fill="#0D0D0C"/>
+              
+              <!-- Top Dynamic Island Notch -->
+              <rect x="42" y="12" width="46" height="8" rx="4" fill="#1E1D1B"/>
+              
+              <!-- Animated Captions Representation in Center -->
+              <rect x="18" y="110" width="94" height="12" rx="3" fill="rgba(255, 255, 255, 0.15)"/>
+              <rect x="28" y="128" width="74" height="12" rx="3" fill="#F59E0B" opacity="0.85"/>
+              <rect x="22" y="146" width="86" height="10" rx="3" fill="rgba(255, 255, 255, 0.1)"/>
+
+              <!-- Audio waveform pulse at bottom -->
+              <path d="M 20 226 L 25 218 L 30 232 L 35 222 L 40 228 L 45 214 L 50 234 L 55 220 L 60 228 L 65 216 L 70 230 L 75 222 L 80 234 L 85 218 L 90 228 L 95 220 L 100 230 L 105 224 L 110 228" stroke="rgba(129, 140, 248, 0.7)" stroke-width="1.4" stroke-linecap="round"/>
+
+              <!-- Bottom Progress Bar -->
+              <line x1="14" y1="250" x2="116" y2="250" stroke="rgba(255, 255, 255, 0.12)" stroke-width="2"/>
+              <line x1="14" y1="250" x2="68" y2="250" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+            </g>
+
+            <!-- Orbiting soundwave arc guides on left and right -->
+            <path d="M 140 100 A 70 70 0 0 0 140 220" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1" stroke-dasharray="3 3"/>
+            <path d="M 120 80 A 95 95 0 0 0 120 240" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1" stroke-dasharray="4 4"/>
+            <path d="M 380 100 A 70 70 0 0 1 380 220" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1" stroke-dasharray="3 3"/>
+            <path d="M 400 80 A 95 95 0 0 1 400 240" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1" stroke-dasharray="4 4"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3 class="service-title">Instagram Reels &amp; Shorts</h3>
+          <p class="service-desc">
+            Fast-paced, hook-driven vertical content tailored for viral algorithms. Kinetic subtitles, velocity curves, screen punches, and trending audio synchronization that turn casual scrollers into engaged followers.
+          </p>
+        </div>
+      </article>
+
+      <!-- Service 3: Cinematic edits -->
+      <article class="service-card">
+        <div class="service-media-wrap">
+          <svg viewBox="0 0 520 320" class="service-canvas-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="520" height="320" fill="#131211"/>
+            
+            <!-- 2.39:1 Anamorphic Widescreen Frame -->
+            <g transform="translate(45, 60)">
+              <rect x="0" y="0" width="430" height="200" rx="8" fill="#0A0A09" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
+              
+              <!-- Cinematic Top & Bottom Letterbox Bars -->
+              <rect x="0" y="0" width="430" height="24" fill="#000000"/>
+              <rect x="0" y="176" width="430" height="24" fill="#000000"/>
+              
+              <!-- Rule of Thirds Cinematic Composition Grid -->
+              <line x1="143" y1="24" x2="143" y2="176" stroke="rgba(255, 255, 255, 0.05)" stroke-width="0.8"/>
+              <line x1="287" y1="24" x2="287" y2="176" stroke="rgba(255, 255, 255, 0.05)" stroke-width="0.8"/>
+              <line x1="0" y1="75" x2="430" y2="75" stroke="rgba(255, 255, 255, 0.05)" stroke-width="0.8"/>
+              <line x1="0" y1="125" x2="430" y2="125" stroke="rgba(255, 255, 255, 0.05)" stroke-width="0.8"/>
+
+              <!-- Anamorphic Blue Flare Streak Accent -->
+              <line x1="60" y1="100" x2="370" y2="100" stroke="url(#cinematicFlare)" stroke-width="1.5" opacity="0.65"/>
+              <circle cx="215" cy="100" r="14" fill="url(#flareBulb)" opacity="0.7"/>
+
+              <defs>
+                <linearGradient id="cinematicFlare" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#38BDF8" stop-opacity="0"/>
+                  <stop offset="30%" stop-color="#38BDF8" stop-opacity="0.3"/>
+                  <stop offset="50%" stop-color="#BAE6FD" stop-opacity="0.9"/>
+                  <stop offset="70%" stop-color="#38BDF8" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+                </linearGradient>
+                <radialGradient id="flareBulb" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+                  <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.5"/>
+                  <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+
+              <!-- Crosshair Center Reticle -->
+              <line x1="211" y1="100" x2="219" y2="100" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1"/>
+              <line x1="215" y1="96" x2="215" y2="104" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1"/>
+            </g>
+
+            <!-- Film Sprocket Dots Representation along outer left and right margins -->
+            <circle cx="24" cy="90" r="3" fill="rgba(255, 255, 255, 0.08)"/>
+            <circle cx="24" cy="125" r="3" fill="rgba(255, 255, 255, 0.08)"/>
+            <circle cx="24" cy="160" r="3" fill="rgba(255, 255, 255, 0.08)"/>
+            <circle cx="24" cy="195" r="3" fill="rgba(255, 255, 255, 0.08)"/>
+            <circle cx="24" cy="230" r="3" fill="rgba(255, 255, 255, 0.08)"/>
+
+            <circle cx="496" cy="90" r="3" fill="rgba(255, 255, 255, 0.08)"/>
+            <circle cx="496" cy="125" r="3" fill="rgba(255, 255, 255, 0.08)"/>
+            <circle cx="496" cy="160" r="3" fill="rgba(255, 255, 255, 0.08)"/>
+            <circle cx="496" cy="195" r="3" fill="rgba(255, 255, 255, 0.08)"/>
+            <circle cx="496" cy="230" r="3" fill="rgba(255, 255, 255, 0.08)"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3 class="service-title">Cinematic Edits</h3>
+          <p class="service-desc">
+            Narrative-driven visual edits for short films, mini-documentaries, travel films, and storytelling reels. Purposeful pacing, speed ramps, match cuts, and atmospheric staging that evoke deep emotional resonance.
+          </p>
+        </div>
+      </article>
+
+      <!-- Service 4: Commercial ads -->
+      <article class="service-card">
+        <div class="service-media-wrap">
+          <svg viewBox="0 0 520 320" class="service-canvas-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="520" height="320" fill="#141312"/>
+            
+            <!-- Isometric Multi-Card Storyboard Arrangement -->
+            <g transform="translate(60, 45)">
+              <!-- Card 1 (Back Left) -->
+              <g transform="translate(0, 30) skewY(-8)">
+                <rect x="0" y="0" width="115" height="150" rx="8" fill="#1C1B19" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+                <rect x="10" y="10" width="95" height="70" rx="4" fill="#0F0E0D"/>
+                <line x1="10" y1="96" x2="70" y2="96" stroke="rgba(255, 255, 255, 0.2)" stroke-width="3" stroke-linecap="round"/>
+                <line x1="10" y1="108" x2="90" y2="108" stroke="rgba(255, 255, 255, 0.1)" stroke-width="2" stroke-linecap="round"/>
+              </g>
+
+              <!-- Card 2 (Center Raised Focus) -->
+              <g transform="translate(140, 10) skewY(-8)">
+                <rect x="0" y="0" width="125" height="165" rx="10" fill="#242220" stroke="rgba(255, 255, 255, 0.18)" stroke-width="1.4" filter="drop-shadow(0 15px 25px rgba(0,0,0,0.4))"/>
+                <rect x="10" y="10" width="105" height="85" rx="6" fill="#11100F"/>
+                <!-- Product Glow Box -->
+                <rect x="25" y="25" width="75" height="55" rx="4" fill="url(#adGlow)" opacity="0.6"/>
+                <line x1="10" y1="110" x2="85" y2="110" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+                <line x1="10" y1="124" x2="100" y2="124" stroke="rgba(255, 255, 255, 0.15)" stroke-width="2" stroke-linecap="round"/>
+              </g>
+
+              <!-- Card 3 (Right Angled) -->
+              <g transform="translate(290, 24) skewY(-8)">
+                <rect x="0" y="0" width="115" height="150" rx="8" fill="#1C1B19" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+                <rect x="10" y="10" width="95" height="70" rx="4" fill="#0F0E0D"/>
+                <line x1="10" y1="96" x2="60" y2="96" stroke="rgba(255, 255, 255, 0.2)" stroke-width="3" stroke-linecap="round"/>
+                <line x1="10" y1="108" x2="85" y2="108" stroke="rgba(255, 255, 255, 0.1)" stroke-width="2" stroke-linecap="round"/>
+              </g>
+            </g>
+
+            <defs>
+              <linearGradient id="adGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.5"/>
+                <stop offset="100%" stop-color="#D97706" stop-opacity="0.1"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Bottom Motion Vector Curve connecting the frames -->
+            <path d="M 90 260 C 180 230, 280 270, 420 220" fill="none" stroke="rgba(245, 158, 11, 0.4)" stroke-width="1.8" stroke-dasharray="4 4"/>
+            <circle cx="420" cy="220" r="4" fill="#F59E0B"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3 class="service-title">Commercial Ads</h3>
+          <p class="service-desc">
+            High-converting promotional video ads, brand launch teasers, and product highlight films. Engineered with kinetic pacing, crisp brand alignment, visual hierarchy, and punchy calls to action that drive conversions.
+          </p>
+        </div>
+      </article>
+
+      <!-- Service 5: Color grading and sound design -->
+      <article class="service-card">
+        <div class="service-media-wrap">
+          <svg viewBox="0 0 520 320" class="service-canvas-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="520" height="320" fill="#141312"/>
+            
+            <!-- Left Side: DaVinci Resolve Primary Color Wheels Reticles -->
+            <g transform="translate(70, 60)">
+              <!-- Lift Wheel -->
+              <circle cx="50" cy="50" r="44" fill="#1A1917" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
+              <line x1="50" y1="10" x2="50" y2="90" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+              <line x1="10" y1="50" x2="90" y2="50" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+              <circle cx="44" cy="56" r="4" fill="#38BDF8"/>
+
+              <!-- Gamma Wheel -->
+              <circle cx="150" cy="50" r="44" fill="#1A1917" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
+              <line x1="150" y1="10" x2="150" y2="90" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+              <line x1="110" y1="50" x2="190" y2="50" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+              <circle cx="154" cy="46" r="4" fill="#34D399"/>
+
+              <!-- Gain Wheel -->
+              <circle cx="100" cy="140" r="44" fill="#1A1917" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.2"/>
+              <line x1="100" y1="100" x2="100" y2="180" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+              <line x1="60" y1="140" x2="140" y2="140" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+              <circle cx="106" cy="132" r="4" fill="#F43F5E"/>
+            </g>
+
+            <!-- Vertical Divider -->
+            <line x1="280" y1="45" x2="280" y2="265" stroke="rgba(255, 255, 255, 0.06)" stroke-width="1"/>
+
+            <!-- Right Side: Sound Spectrum & Audio VU Meters -->
+            <g transform="translate(305, 55)">
+              <!-- Sound Waves Base Box -->
+              <rect x="0" y="0" width="160" height="190" rx="8" fill="#1A1917" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+              
+              <!-- Frequency Curves (Stereo L / R) -->
+              <path d="M 12 95 Q 35 30 65 95 T 115 95 T 148 95" fill="none" stroke="rgba(245, 158, 11, 0.75)" stroke-width="1.8"/>
+              <path d="M 12 110 Q 45 60 75 110 T 125 110 T 148 110" fill="none" stroke="rgba(129, 140, 248, 0.65)" stroke-width="1.8"/>
+              
+              <!-- Frequency baseline -->
+              <line x1="10" y1="140" x2="150" y2="140" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+              
+              <!-- VU Spectrum Equalizer Bars -->
+              <line x1="22" y1="172" x2="22" y2="148" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+              <line x1="34" y1="172" x2="34" y2="136" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+              <line x1="46" y1="172" x2="46" y2="152" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+              <line x1="58" y1="172" x2="58" y2="130" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+              <line x1="70" y1="172" x2="70" y2="124" stroke="#FBBF24" stroke-width="3" stroke-linecap="round"/>
+              <line x1="82" y1="172" x2="82" y2="142" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+              <line x1="94" y1="172" x2="94" y2="118" stroke="#FBBF24" stroke-width="3" stroke-linecap="round"/>
+              <line x1="106" y1="172" x2="106" y2="134" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+              <line x1="118" y1="172" x2="118" y2="112" stroke="#EF4444" stroke-width="3" stroke-linecap="round"/>
+              <line x1="130" y1="172" x2="130" y2="138" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+              <line x1="142" y1="172" x2="142" y2="150" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+            </g>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3 class="service-title">Color Grading &amp; Sound Design</h3>
+          <p class="service-desc">
+            Studio-grade post-production in DaVinci Resolve. Film emulation LUT creation, dynamic lighting correction, skin-tone preservation, Foley sound effects, dialogue denoise, and balanced spatial audio mixing.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Bottom Callout Banner -->
+    <div class="work-cta-banner" style="margin-top: 60px;">
+      <div class="work-cta-text">
+        <h4 class="work-cta-heading">Ready to elevate your visual content with high-retention video editing?</h4>
+        <p class="work-cta-sub">Let's craft something unforgettable together.</p>
+      </div>
+      <a href="index.html#contact" class="work-cta-btn">Get in touch</a>
+    </div>
+
+  </main>
+
+  <!-- Unified JS Script -->
+  <script src="js/app.js?v=10"></script>
+</body>
+</html>

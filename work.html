@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work — Uddalok Bhattacharya | Video Editor</title>
+  <meta name="description" content="All video editing projects, gaming montages, reels, and cinematic edits by Uddalok Bhattacharya.">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=10">
+</head>
+<body>
+
+  <!-- FIXED HEADER CAPSULE -->
+  <header class="header-fixed-wrap">
+    <div id="main-nav-capsule" class="main-nav-capsule">
+      
+      <!-- Brand Logo / Name: Links back to home -->
+      <a id="nav-logo-link" href="index.html" class="nav-logo-link" aria-label="Uddalok Bhattacharya Home">
+        <span class="nav-brand-text">Uddalok Bhattacharya</span>
+      </a>
+
+      <!-- Center Nav Links: "Work" is active capsule -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html#hero" class="nav-btn-link">Intro</a>
+        <a href="index.html#about" class="nav-btn-link">About</a>
+        <a href="services.html" class="nav-btn-link">Services</a>
+        <a href="work.html" class="nav-btn-link active">Work</a>
+        <a href="index.html#contact" class="nav-btn-link">Contact</a>
+      </nav>
+
+      <!-- Right: Vintage Hardware Skeuomorphic Switch Button -->
+      <div class="switch-right-wrap">
+        <button 
+          id="nav-vintage-toggle-btn" 
+          class="nav-vintage-toggle-btn" 
+          type="button" 
+          role="switch" 
+          aria-checked="false" 
+          aria-label="Vintage toggle switch: currently in Dark mode. Click to toggle to Royal Purple mode."
+          title="Flip switch to Day / Purple Mode"
+        >
+          <svg id="vintageSwitchSvg" viewBox="0 0 68 28" class="vintage-switch-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <!-- Dark Plate Linear Gradient -->
+              <linearGradient id="vintagePlateDark" x1="0" y1="0" x2="68" y2="28" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#32302C"/>
+                <stop offset="35%" stop-color="#22211E"/>
+                <stop offset="70%" stop-color="#1C1B19"/>
+                <stop offset="100%" stop-color="#151413"/>
+              </linearGradient>
+
+              <!-- Purple Theme Plate Gradient -->
+              <linearGradient id="vintagePlatePurple" x1="0" y1="0" x2="68" y2="28" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#4C1D95"/>
+                <stop offset="30%" stop-color="#3B1578"/>
+                <stop offset="70%" stop-color="#290E52"/>
+                <stop offset="100%" stop-color="#1C0938"/>
+              </linearGradient>
+
+              <!-- Rim Highlight Dark -->
+              <linearGradient id="rimHighlightDark" x1="0" y1="0" x2="0" y2="28" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#57544C"/>
+                <stop offset="50%" stop-color="#2E2C28"/>
+                <stop offset="100%" stop-color="#0E0D0C"/>
+              </linearGradient>
+
+              <!-- Rim Highlight Purple -->
+              <linearGradient id="rimHighlightPurple" x1="0" y1="0" x2="0" y2="28" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#C084FC"/>
+                <stop offset="50%" stop-color="#7E22CE"/>
+                <stop offset="100%" stop-color="#3B0764"/>
+              </linearGradient>
+
+              <!-- Cavity Recessed Slot Shadow -->
+              <linearGradient id="cavityShadow" x1="0" y1="0" x2="0" y2="14" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#080807" stop-opacity="0.95"/>
+                <stop offset="60%" stop-color="#131211" stop-opacity="0.85"/>
+                <stop offset="100%" stop-color="#21201D" stop-opacity="0.6"/>
+              </linearGradient>
+
+              <!-- Lever Baton Metallic Gradient Dark -->
+              <linearGradient id="leverBatonDark" x1="0" y1="0" x2="14" y2="14" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#F5F4F0"/>
+                <stop offset="25%" stop-color="#D5D2C8"/>
+                <stop offset="55%" stop-color="#8C887E"/>
+                <stop offset="85%" stop-color="#57544C"/>
+                <stop offset="100%" stop-color="#3A3833"/>
+              </linearGradient>
+
+              <!-- Lever Baton Metallic Gradient Active / Light -->
+              <linearGradient id="leverBatonLight" x1="0" y1="0" x2="14" y2="14" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FFF9E6"/>
+                <stop offset="30%" stop-color="#F5D77F"/>
+                <stop offset="70%" stop-color="#D4A738"/>
+                <stop offset="100%" stop-color="#99701E"/>
+              </linearGradient>
+
+              <!-- Pilot Bulb Amber Light ON -->
+              <radialGradient id="pilotBulbOn" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+                <stop offset="25%" stop-color="#FEF3C7" stop-opacity="1"/>
+                <stop offset="65%" stop-color="#F59E0B" stop-opacity="0.95"/>
+                <stop offset="90%" stop-color="#D97706" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#92400E" stop-opacity="0.8"/>
+              </radialGradient>
+
+              <!-- Pilot Bulb Dim OFF -->
+              <radialGradient id="pilotBulbOff" cx="40%" cy="40%" r="50%">
+                <stop offset="0%" stop-color="#78350F" stop-opacity="0.6"/>
+                <stop offset="60%" stop-color="#451A03" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#1A0B02" stop-opacity="0.9"/>
+              </radialGradient>
+            </defs>
+
+            <!-- Face Plate -->
+            <rect class="switch-plate" x="1" y="1" width="66" height="26" rx="13" fill="url(#vintagePlateDark)" stroke="url(#rimHighlightDark)" stroke-width="1.2"/>
+            <rect class="switch-inner-rim" x="2.6" y="2.6" width="62.8" height="22.8" rx="11.4" fill="none" stroke="#2A2825" stroke-width="0.6" stroke-dasharray="100" opacity="0.8"/>
+
+            <!-- Left Screw Rivet -->
+            <g transform="translate(7.5, 14)">
+              <circle cx="0" cy="0" r="1.9" fill="#2C2A26" stroke="#141413" stroke-width="0.4"/>
+              <line x1="-1.3" y1="-0.7" x2="1.3" y2="0.7" stroke="#0D0D0C" stroke-width="0.5" stroke-linecap="round"/>
+            </g>
+
+            <!-- Right Screw Rivet -->
+            <g transform="translate(60.5, 14)">
+              <circle cx="0" cy="0" r="1.9" fill="#2C2A26" stroke="#141413" stroke-width="0.4"/>
+              <line x1="-1.2" y1="0.9" x2="1.2" y2="-0.9" stroke="#0D0D0C" stroke-width="0.5" stroke-linecap="round"/>
+            </g>
+
+            <!-- Recessed Cavity Slot -->
+            <g transform="translate(13.5, 7)">
+              <rect class="switch-cavity-rim" x="0" y="0" width="41" height="14" rx="7" fill="#151413" stroke="#33312C" stroke-width="0.8"/>
+              <rect x="1" y="1" width="39" height="12" rx="6" fill="url(#cavityShadow)"/>
+            </g>
+
+            <!-- Pilot LED Indicator -->
+            <g transform="translate(34, 4)">
+              <circle cx="0" cy="0" r="2.2" fill="#3D3B36" stroke="#262522" stroke-width="0.4"/>
+              <circle class="pilot-gem" cx="0" cy="0" r="1.6" fill="url(#pilotBulbOff)"/>
+              <circle cx="-0.4" cy="-0.4" r="0.5" fill="#FFFFFF" opacity="0.3"/>
+            </g>
+
+            <!-- Mechanical Lever Group -->
+            <g id="switchLeverG" class="switch-lever-group">
+              <ellipse cx="2.5" cy="15.5" rx="4.8" ry="3" fill="#000000" opacity="0.45"/>
+              <circle cx="0" cy="14" r="5.5" fill="#2D2B27" stroke="#4D4A43" stroke-width="0.7"/>
+              <circle cx="0" cy="14" r="4" fill="#1A1917"/>
+
+              <g class="baton-lever-tilt">
+                <path d="M -1.8 14 L -1.1 6.8 L 1.1 6.8 L 1.8 14 Z" fill="url(#leverBatonDark)" stroke="#33312C" stroke-width="0.35"/>
+                <circle cx="0" cy="5.5" r="3.5" fill="url(#leverBatonDark)" stroke="#A3A199" stroke-width="0.45"/>
+                <ellipse cx="-1" cy="4.5" rx="1.1" ry="1.6" transform="rotate(-25 -1 4.5)" fill="#FFFFFF" opacity="0.75"/>
+                <line x1="-2" y1="5.5" x2="2" y2="5.5" stroke="#2E2D2A" stroke-width="0.35" opacity="0.7"/>
+                <line x1="-1.6" y1="6.5" x2="1.6" y2="6.5" stroke="#2E2D2A" stroke-width="0.35" opacity="0.7"/>
+              </g>
+            </g>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="page-container" style="padding-top: 100px;">
+
+    <!-- Top Navigation Row: Back Link -->
+    <div class="work-page-nav-row">
+      <a href="index.html" class="back-to-home-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"/>
+          <polyline points="12 19 5 12 12 5"/>
+        </svg>
+        <span>Back to Home</span>
+      </a>
+    </div>
+
+    <!-- Page Title & Header -->
+    <div class="work-page-intro">
+      <h1 class="work-page-title">Work</h1>
+      <p class="work-page-sub">
+        A curated archive of gaming montages, viral shorts, DaVinci color grading, and creator storytelling.
+      </p>
+    </div>
+
+    <!-- ======================================================================
+         SEGMENTED FILTER BAR (Strictly matching user specifications)
+         [ All ▾ | Niche ▾ ]
+         ====================================================================== -->
+    <section class="filter-bar-container" aria-label="Project Filters">
+      <!-- The Segmented Bar -->
+      <div class="segmented-filter-bar" id="segmentedFilterBar">
+        
+        <!-- Left Segment: "All" with 2 options: Videos & Shorts. Arrow flips up when clicked. -->
+        <div class="filter-segment-wrap">
+          <button 
+            type="button" 
+            class="filter-segment-btn" 
+            id="categorySegmentBtn" 
+            aria-haspopup="listbox" 
+            aria-expanded="false"
+            aria-label="Filter by format: Videos or Shorts"
+          >
+            <span class="filter-segment-label" id="categorySegmentLabel">All</span>
+            <svg class="filter-chevron-icon" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true">
+              <polygon points="0,0 10,0 5,6" fill="currentColor"/>
+            </svg>
+          </button>
+
+          <!-- Format Dropdown Menu: Exactly 2 options: Videos & Shorts -->
+          <div class="filter-dropdown-menu" id="categoryDropdownMenu" role="listbox">
+            <button type="button" class="dropdown-menu-item" data-filter-type="format" data-filter-value="videos">
+              <span>Videos</span>
+              <svg class="dropdown-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </button>
+            <button type="button" class="dropdown-menu-item" data-filter-type="format" data-filter-value="shorts">
+              <span>Shorts</span>
+              <svg class="dropdown-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Vertical Divider line between segments: | -->
+        <div class="filter-bar-divider" aria-hidden="true"></div>
+
+        <!-- Right Segment: "Niche" with many options: Gaming, Gaming montage, etc. Arrow flips up when clicked. -->
+        <div class="filter-segment-wrap">
+          <button 
+            type="button" 
+            class="filter-segment-btn" 
+            id="nicheSegmentBtn" 
+            aria-haspopup="listbox" 
+            aria-expanded="false"
+            aria-label="Filter by niche"
+          >
+            <span class="filter-segment-label" id="nicheSegmentLabel">Niche</span>
+            <svg class="filter-chevron-icon" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true">
+              <polygon points="0,0 10,0 5,6" fill="currentColor"/>
+            </svg>
+          </button>
+
+          <!-- Niche Dropdown Menu with Gaming, Gaming montage, etc. -->
+          <div class="filter-dropdown-menu" id="nicheDropdownMenu" role="listbox">
+            <button type="button" class="dropdown-menu-item selected" data-filter-type="niche" data-filter-value="all">
+              <span>All Niches</span>
+              <svg class="dropdown-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </button>
+            <button type="button" class="dropdown-menu-item" data-filter-type="niche" data-filter-value="gaming">
+              <span>Gaming</span>
+              <svg class="dropdown-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </button>
+            <button type="button" class="dropdown-menu-item" data-filter-type="niche" data-filter-value="gaming-montage">
+              <span>Gaming montage</span>
+              <svg class="dropdown-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </button>
+            <button type="button" class="dropdown-menu-item" data-filter-type="niche" data-filter-value="talking-head">
+              <span>Talking Head</span>
+              <svg class="dropdown-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </button>
+            <button type="button" class="dropdown-menu-item" data-filter-type="niche" data-filter-value="documentary">
+              <span>Documentary / Storytelling</span>
+              <svg class="dropdown-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </button>
+            <button type="button" class="dropdown-menu-item" data-filter-type="niche" data-filter-value="tech">
+              <span>Tech &amp; Gadgets</span>
+              <svg class="dropdown-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </button>
+            <button type="button" class="dropdown-menu-item" data-filter-type="niche" data-filter-value="vlog">
+              <span>Vlogs &amp; Travel</span>
+              <svg class="dropdown-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </button>
+            <button type="button" class="dropdown-menu-item" data-filter-type="niche" data-filter-value="commercial">
+              <span>Commercial &amp; Brand Ads</span>
+              <svg class="dropdown-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </button>
+            <button type="button" class="dropdown-menu-item" data-filter-type="niche" data-filter-value="anime">
+              <span>Anime &amp; Edit Montage</span>
+              <svg class="dropdown-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </button>
+            <button type="button" class="dropdown-menu-item" data-filter-type="niche" data-filter-value="finance">
+              <span>Finance &amp; Business</span>
+              <svg class="dropdown-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         PROJECTS SHOWCASE GRID (Filtered in real-time)
+         ====================================================================== -->
+    <div class="work-all-projects-grid" id="projectsGrid">
+
+      <!-- Project 1: Color Grading & Visual Polish -->
+      <article 
+        class="work-project-item" 
+        data-type="shorts" 
+        data-niche="talking-head" 
+        data-video-src="https://cdn.videotourl.net/videos/48e965f0-56ac-4ee9-a658-adea149fd64b.mp4"
+        tabindex="0"
+        role="button"
+        aria-label="View project: Color Grading & Visual Polish — Before vs After"
+      >
+        <div class="project-thumbnail-box">
+          <video 
+            src="https://cdn.videotourl.net/videos/48e965f0-56ac-4ee9-a658-adea149fd64b.mp4" 
+            poster="assets/images/work_pf.jpg"
+            loop muted playsinline preload="metadata" 
+            class="project-preview-video"
+          ></video>
+          <div class="project-play-hover-btn">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="project-details-wrap">
+          <h3 class="project-item-title">Color Grading &amp; Visual Polish — Before vs After</h3>
+          <p class="project-item-desc">
+            Professional DaVinci Resolve color transformation, studio lighting correction, skin tone recovery, and high-impact visual enhancement.
+          </p>
+        </div>
+      </article>
+
+      <!-- Project 2: illuMax Wolverine Motivation & Creator Edit -->
+      <article 
+        class="work-project-item" 
+        data-type="videos" 
+        data-niche="gaming-montage" 
+        data-video-src="https://cdn.videotourl.net/videos/41e1b2f5-99df-413c-874e-3e2107038fc5.mp4"
+        tabindex="0"
+        role="button"
+        aria-label="View project: illuMax — Wolverine Motivation & Creator Edit"
+      >
+        <div class="project-thumbnail-box">
+          <video 
+            src="https://cdn.videotourl.net/videos/41e1b2f5-99df-413c-874e-3e2107038fc5.mp4" 
+            poster="assets/images/work_illumax.jpg"
+            loop muted playsinline preload="metadata" 
+            class="project-preview-video"
+          ></video>
+          <div class="project-play-hover-btn">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="project-details-wrap">
+          <h3 class="project-item-title">illuMax — Wolverine Motivation &amp; Creator Edit</h3>
+          <p class="project-item-desc">
+            High-energy 16:9 YouTube creator edit featuring custom kinetic typography, character motion tracking, sound design stingers, and retention-engineered pacing.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Empty State when no projects match filters -->
+    <div class="filter-empty-state" id="filterEmptyState">
+      <h3 class="filter-empty-title">No matching projects found</h3>
+      <p class="filter-empty-sub">Try selecting another category or niche combination.</p>
+    </div>
+
+    <!-- Bottom Callout Banner matching reference -->
+    <div class="work-cta-banner" style="margin-top: 60px;">
+      <div class="work-cta-text">
+        <h4 class="work-cta-heading">Looking for deeper confidential artifacts or end-to-end design system teardowns?</h4>
+        <p class="work-cta-sub">Let's connect!</p>
+      </div>
+      <a href="index.html#contact" class="work-cta-btn">Get in touch</a>
+    </div>
+
+  </main>
+
+  <!-- VIDEO PLAYER MODAL -->
+  <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Video Player Modal">
+    <div class="modal-content" id="modalContentBox">
+      <button class="close-modal-btn" id="closeModalBtn" aria-label="Close modal">✕</button>
+      <video id="modalVideoPlayer" controls playsinline class="modal-video-player" style="display: none;"></video>
+      <iframe id="modalIframePlayer" class="modal-iframe-player" src="" allow="autoplay; fullscreen" allowfullscreen style="display: none;"></iframe>
+      <div class="modal-footer-bar" id="modalFooterBar">
+        <a id="modalDriveLink" href="#" target="_blank" rel="noopener noreferrer" class="modal-drive-action-btn">
+          <span>Watch Original on Google Drive</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="7 7 17 7 17 17"/><line x1="17" y1="7" x2="7" y2="17"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unified JS Script -->
+  <script src="js/app.js?v=10"></script>
+</body>
+</html>
