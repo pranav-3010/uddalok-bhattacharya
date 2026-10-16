@@ -34,8 +34,9 @@
         <a href="index.html#contact" class="nav-btn-link">Contact</a>
       </nav>
 
-      <!-- Right: Vintage Hardware Skeuomorphic Switch Button -->
-      <div class="switch-right-wrap">
+      <!-- Right Header Actions: Vintage Switch + Mobile Menu Toggle -->
+      <div class="header-right-actions">
+        <div class="switch-right-wrap">
         <button 
           id="nav-vintage-toggle-btn" 
           class="nav-vintage-toggle-btn" 
@@ -165,6 +166,46 @@
         </button>
       </div>
 
+        <!-- Mobile Menu Toggle Button (Hamburger / Cross) -->
+        <button 
+          id="mobileMenuToggleBtn" 
+          class="mobile-menu-toggle-btn" 
+          type="button" 
+          aria-label="Toggle navigation menu" 
+          aria-expanded="false"
+        >
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Floating Drawer -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+      <nav class="mobile-nav-links" aria-label="Mobile Navigation">
+        <a href="index.html#hero" class="mobile-nav-item">
+          <span>Intro</span>
+          <span class="mobile-nav-sub">01</span>
+        </a>
+        <a href="index.html#about" class="mobile-nav-item">
+          <span>About</span>
+          <span class="mobile-nav-sub">02</span>
+        </a>
+        <a href="services.html" class="mobile-nav-item">
+          <span>Services</span>
+          <span class="mobile-nav-sub">03</span>
+        </a>
+        <a href="work.html" class="mobile-nav-item active">
+          <span>Work</span>
+          <span class="mobile-nav-sub">04</span>
+        </a>
+        <a href="index.html#contact" class="mobile-nav-item">
+          <span>Contact</span>
+          <span class="mobile-nav-sub">05</span>
+        </a>
+      </nav>
     </div>
   </header>
 

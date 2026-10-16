@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initVintageSwitch();
   initNavigationLinks();
+  initMobileMenu();
   initStatusIndicator();
   initMultilingualGreetings();
   initAboutScrollReveal();
@@ -170,11 +171,15 @@ function initNavigationLinks() {
   function updateNavOnScroll() {
     const scrollPos = window.scrollY + 200;
     const aboutEl = document.getElementById('about');
+    const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
 
     // If near the top hero/intro section, set Intro active
     if (aboutEl && (scrollPos < aboutEl.offsetTop + 40)) {
       navBtns.forEach(b => {
         b.classList.toggle('active', b.getAttribute('data-section') === 'hero' || b.textContent.trim() === 'Intro');
+      });
+      mobileNavItems.forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-section') === 'hero');
       });
       return;
     }
@@ -186,11 +191,10 @@ function initNavigationLinks() {
         const height = el.offsetHeight;
         if (scrollPos >= top && scrollPos < top + height) {
           navBtns.forEach(b => {
-            if (b.textContent.trim() === sec.name) {
-              b.classList.add('active');
-            } else {
-              b.classList.remove('active');
-            }
+            b.classList.toggle('active', b.textContent.trim() === sec.name);
+          });
+          mobileNavItems.forEach(b => {
+            b.classList.toggle('active', b.getAttribute('data-section') === sec.id);
           });
           break;
         }
@@ -205,6 +209,85 @@ function initNavigationLinks() {
         navTicking = false;
       });
       navTicking = true;
+    }
+  }, { passive: true });
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE MOBILE NAVIGATION DRAWER & ACCESSIBLE HAMBURGER CONTROLLER
+   -------------------------------------------------------------------------- */
+function initMobileMenu() {
+  const toggleBtn = document.getElementById('mobileMenuToggleBtn');
+  const drawer = document.getElementById('mobileNavDrawer');
+  if (!toggleBtn || !drawer) return;
+
+  function openMenu() {
+    toggleBtn.classList.add('is-open');
+    drawer.classList.add('show');
+    toggleBtn.setAttribute('aria-expanded', 'true');
+    drawer.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeMenu() {
+    toggleBtn.classList.remove('is-open');
+    drawer.classList.remove('show');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    drawer.setAttribute('aria-hidden', 'true');
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = toggleBtn.classList.contains('is-open');
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // Handle mobile drawer links
+  const drawerItems = drawer.querySelectorAll('.mobile-nav-item');
+  drawerItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+      const sectionId = item.getAttribute('data-section');
+      if (sectionId) {
+        if (sectionId === 'hero') {
+          const heroEl = document.getElementById('hero');
+          if (heroEl) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        } else {
+          const targetEl = document.getElementById(sectionId);
+          if (targetEl) {
+            e.preventDefault();
+            const targetY = targetEl.getBoundingClientRect().top + window.pageYOffset - 80;
+            window.scrollTo({ top: targetY, behavior: 'smooth' });
+          }
+        }
+      }
+      closeMenu();
+    });
+  });
+
+  // Close when tapping outside drawer
+  document.addEventListener('click', (e) => {
+    if (!drawer.contains(e.target) && !toggleBtn.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeMenu();
+    }
+  });
+
+  // Auto-close when resized to desktop viewport
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 640 && toggleBtn.classList.contains('is-open')) {
+      closeMenu();
     }
   }, { passive: true });
 }
