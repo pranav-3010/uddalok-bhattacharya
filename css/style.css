@@ -2353,6 +2353,13 @@ button {
   }
 }
 
+@media (min-width: 1024px) {
+  .services-two-col-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+}
+
 .services-all-grid {
   display: grid;
   grid-template-columns: 1fr;
