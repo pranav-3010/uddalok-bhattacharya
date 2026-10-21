@@ -217,10 +217,42 @@ button {
 .nav-logo-link {
   display: flex;
   align-items: center;
+  gap: 9px;
   cursor: pointer;
   padding-left: 2px;
   flex-shrink: 0;
   outline: none;
+  text-decoration: none;
+}
+
+.nav-brand-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+}
+
+@media (min-width: 480px) {
+  .nav-brand-logo {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (min-width: 640px) {
+  .nav-brand-logo {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.nav-logo-link:hover .nav-brand-logo {
+  transform: scale(1.06);
+  box-shadow: 0 0 0 1.5px rgba(129, 140, 248, 0.5);
 }
 
 .nav-brand-text {
