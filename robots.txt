@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Allow: /favicon.ico
+Allow: /assets/
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+Allow: /assets/images/
+Allow: /favicon.ico
