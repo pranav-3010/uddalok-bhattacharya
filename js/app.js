@@ -432,21 +432,16 @@ function initVideoPlayerModal() {
   const modal = document.getElementById('videoModal');
   const modalBox = modal ? modal.querySelector('.modal-content') : null;
   const player = document.getElementById('modalVideoPlayer');
-  const iframe = document.getElementById('modalIframePlayer');
-  const footerBar = document.getElementById('modalFooterBar');
-  const driveLink = document.getElementById('modalDriveLink');
   const closeBtn = document.getElementById('closeModalBtn');
   const cards = document.querySelectorAll('.reel-card, .work-feature-card, .work-project-item');
 
-  if (!modal || !closeBtn) return;
+  if (!modal || !closeBtn || !player) return;
 
   cards.forEach(card => {
     card.addEventListener('click', (e) => {
       // Don't trigger if clicked on an actual link inside the card
       if (e.target.closest('a')) return;
 
-      const drivePreview = card.getAttribute('data-drive-preview');
-      const driveView = card.getAttribute('data-drive-link');
       const videoSrc = card.getAttribute('data-video-src');
       const isShort = card.getAttribute('data-type') === 'shorts';
 
@@ -461,35 +456,11 @@ function initVideoPlayerModal() {
         }
       }
 
-      if (drivePreview) {
-        if (player) {
-          player.pause();
-          player.src = '';
-          player.style.display = 'none';
-        }
-        if (iframe) {
-          iframe.src = drivePreview;
-          iframe.style.display = 'block';
-        }
-        if (footerBar && driveLink && driveView) {
-          driveLink.href = driveView;
-          footerBar.style.display = 'flex';
-        }
-        modal.classList.add('active');
-      } else if (videoSrc) {
-        if (iframe) {
-          iframe.src = '';
-          iframe.style.display = 'none';
-        }
-        if (footerBar) {
-          footerBar.style.display = 'none';
-        }
-        if (player) {
-          player.style.display = 'block';
-          player.src = videoSrc;
-          player.currentTime = 0;
-          player.play().catch(() => {});
-        }
+      if (videoSrc) {
+        player.style.display = 'block';
+        player.src = videoSrc;
+        player.currentTime = 0;
+        player.play().catch(() => {});
         modal.classList.add('active');
       }
     });
@@ -497,18 +468,9 @@ function initVideoPlayerModal() {
 
   function hideModal() {
     modal.classList.remove('active');
-    if (player) {
-      player.pause();
-      player.src = '';
-      player.style.display = 'none';
-    }
-    if (iframe) {
-      iframe.src = '';
-      iframe.style.display = 'none';
-    }
-    if (footerBar) {
-      footerBar.style.display = 'none';
-    }
+    player.pause();
+    player.src = '';
+    player.style.display = 'none';
   }
 
   closeBtn.addEventListener('click', hideModal);

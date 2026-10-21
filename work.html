@@ -365,19 +365,21 @@
         class="work-project-item" 
         data-type="shorts" 
         data-niche="talking-head" 
-        data-drive-preview="https://drive.google.com/file/d/1P0yU3cGf_oh4Cd-usZnN_1dHJf8CTdcS/preview"
-        data-drive-link="https://drive.google.com/file/d/1P0yU3cGf_oh4Cd-usZnN_1dHJf8CTdcS/view?usp=sharing"
+        data-video-src="assets/videos/work_pf.mp4"
         tabindex="0"
         role="button"
         aria-label="View project: Color Grading & Visual Polish — Before vs After"
       >
         <div class="project-thumbnail-box">
-          <img 
-            src="assets/images/work_pf.jpg" 
-            alt="Color Grading & Visual Polish — Before vs After" 
+          <video 
+            src="assets/videos/work_pf.mp4" 
+            poster="assets/images/work_pf.jpg" 
+            muted 
+            loop 
+            playsinline 
+            preload="metadata"
             class="project-preview-img"
-            loading="lazy"
-          >
+          ></video>
           <div class="project-play-hover-btn">
             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           </div>
@@ -395,19 +397,21 @@
         class="work-project-item" 
         data-type="videos" 
         data-niche="gaming-montage" 
-        data-drive-preview="https://drive.google.com/file/d/1rUhvYU8_1YQKQ3HH-tghBUyNEReNyAg0/preview"
-        data-drive-link="https://drive.google.com/file/d/1rUhvYU8_1YQKQ3HH-tghBUyNEReNyAg0/view?usp=sharing"
+        data-video-src="assets/videos/work_illumax.mp4"
         tabindex="0"
         role="button"
         aria-label="View project: illuMax — Wolverine Motivation & Creator Edit"
       >
         <div class="project-thumbnail-box">
-          <img 
-            src="assets/images/work_illumax.jpg" 
-            alt="illuMax — Wolverine Motivation & Creator Edit" 
+          <video 
+            src="assets/videos/work_illumax.mp4" 
+            poster="assets/images/work_illumax.jpg" 
+            muted 
+            loop 
+            playsinline 
+            preload="metadata"
             class="project-preview-img"
-            loading="lazy"
-          >
+          ></video>
           <div class="project-play-hover-btn">
             <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           </div>
@@ -444,13 +448,6 @@
     <div class="modal-content" id="modalContentBox">
       <button class="close-modal-btn" id="closeModalBtn" aria-label="Close modal">✕</button>
       <video id="modalVideoPlayer" controls playsinline class="modal-video-player" style="display: none;"></video>
-      <iframe id="modalIframePlayer" class="modal-iframe-player" src="" allow="autoplay; fullscreen" allowfullscreen style="display: none;"></iframe>
-      <div class="modal-footer-bar" id="modalFooterBar">
-        <a id="modalDriveLink" href="#" target="_blank" rel="noopener noreferrer" class="modal-drive-action-btn">
-          <span>Watch Original on Google Drive</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="7 7 17 7 17 17"/><line x1="17" y1="7" x2="7" y2="17"/></svg>
-        </a>
-      </div>
     </div>
   </div>
 
