@@ -28,19 +28,29 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=11">
+  <link rel="stylesheet" href="css/style.css?v=12">
 </head>
 <body>
 
-  <!-- FIXED HEADER CAPSULE -->
+  <!-- FIXED HEADER (Standalone Circular Logo Left + Nav Capsule) -->
   <header class="header-fixed-wrap">
-    <div id="main-nav-capsule" class="main-nav-capsule">
+    <div class="header-outer-container">
       
-      <!-- Brand Logo / Name: Links back to home -->
-      <a id="nav-logo-link" href="index.html" class="nav-logo-link" aria-label="Uddalok Bhattacharya Home">
-        <img src="assets/images/logo-circle.png" alt="UB" class="nav-brand-logo">
-        <span class="nav-brand-text">Uddalok Bhattacharya</span>
+      <!-- Standalone Circular Logo Left (outside capsule) -->
+      <a id="standalone-logo-link" href="index.html" class="header-standalone-logo" aria-label="Uddalok Bhattacharya Home">
+        <img src="assets/images/logo-circle.png" alt="UB" class="standalone-logo-img">
       </a>
+
+      <!-- Main Nav Capsule -->
+      <div id="main-nav-capsule" class="main-nav-capsule">
+        
+        <!-- Brand Logo / Name: Links back to home -->
+        <a id="nav-logo-link" href="index.html" class="nav-logo-link" aria-label="Uddalok Bhattacharya Home">
+          <span class="nav-brand-text">
+            <span class="brand-text-full">Uddalok Bhattacharya</span>
+            <span class="brand-text-short">Uddalok</span>
+          </span>
+        </a>
 
       <!-- Center Nav Links: "Work" is active capsule -->
       <nav class="nav-menu" aria-label="Primary Navigation">
@@ -197,6 +207,7 @@
         </button>
       </div>
 
+    </div>
     </div>
 
     <!-- Mobile Navigation Floating Drawer -->

@@ -159,7 +159,7 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   HEADER CAPSULE (Matching media_1792084312946.png)
+   HEADER (Standalone Circular Logo Left + Main Nav Capsule)
    -------------------------------------------------------------------------- */
 .header-fixed-wrap {
   position: fixed;
@@ -181,6 +181,96 @@ button {
   }
 }
 
+@media (min-width: 1024px) {
+  .header-fixed-wrap {
+    padding: 0 32px;
+  }
+}
+
+/* Outer Flex Container: Holds Standalone Logo + Capsule */
+.header-outer-container {
+  width: 100%;
+  max-width: 1380px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  pointer-events: none;
+}
+
+@media (min-width: 640px) {
+  .header-outer-container {
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-outer-container {
+    gap: 20px;
+  }
+}
+
+/* Standalone Circular Logo on Left outside capsule */
+.header-standalone-logo {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  text-decoration: none;
+  outline: none;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.standalone-logo-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  background-color: var(--bg-nav);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid var(--border-nav);
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+@media (min-width: 640px) {
+  .standalone-logo-img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .standalone-logo-img {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.header-standalone-logo:hover .standalone-logo-img {
+  transform: scale(1.08);
+  box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.65), 0 0 18px rgba(168, 85, 247, 0.45);
+  border-color: rgba(192, 132, 252, 0.7);
+}
+
+.header-standalone-logo:active .standalone-logo-img {
+  transform: scale(0.95);
+}
+
+[data-theme="purple"] .standalone-logo-img {
+  border-color: rgba(192, 132, 252, 0.4);
+  box-shadow: 0 8px 24px -4px rgba(45, 10, 80, 0.5), 0 0 0 1px rgba(192, 132, 252, 0.25);
+}
+
+[data-theme="purple"] .header-standalone-logo:hover .standalone-logo-img {
+  box-shadow: 0 12px 30px -4px rgba(45, 10, 80, 0.7), 0 0 22px rgba(192, 132, 252, 0.6);
+  border-color: #E9D5FF;
+}
+
 .main-nav-capsule {
   pointer-events: auto;
   display: flex;
@@ -194,7 +284,8 @@ button {
   border-radius: 9999px;
   padding: 6px 12px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  width: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
   max-width: 1260px; /* Expanded header capsule matching wider interface */
   transition: var(--transition-theme);
 }
@@ -220,7 +311,8 @@ button {
   gap: 9px;
   cursor: pointer;
   padding-left: 2px;
-  flex-shrink: 0;
+  flex-shrink: 1;
+  min-width: 0;
   outline: none;
   text-decoration: none;
 }
@@ -263,6 +355,23 @@ button {
   letter-spacing: -0.025em;
   white-space: nowrap;
   transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.brand-text-short {
+  display: inline;
+}
+
+.brand-text-full {
+  display: none;
+}
+
+@media (min-width: 520px) {
+  .brand-text-short {
+    display: none;
+  }
+  .brand-text-full {
+    display: inline;
+  }
 }
 
 @media (min-width: 480px) {
@@ -514,11 +623,18 @@ button {
 }
 
 .vintage-switch-svg {
-  width: 64px;
-  height: 26px;
+  width: 58px;
+  height: 24px;
   overflow: visible;
   filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.35));
   display: block;
+}
+
+@media (min-width: 400px) {
+  .vintage-switch-svg {
+    width: 64px;
+    height: 26px;
+  }
 }
 
 @media (min-width: 640px) {

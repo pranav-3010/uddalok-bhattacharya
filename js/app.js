@@ -121,6 +121,7 @@ function applyThemeState(theme) {
 function initNavigationLinks() {
   const navBtns = document.querySelectorAll('.nav-btn-link');
   const logoLink = document.getElementById('nav-logo-link');
+  const standaloneLogoLink = document.getElementById('standalone-logo-link');
 
   function scrollToTop(e) {
     if (window.location.pathname.endsWith('work.html') || window.location.pathname.endsWith('services.html')) return;
@@ -133,6 +134,9 @@ function initNavigationLinks() {
 
   if (logoLink) {
     logoLink.addEventListener('click', scrollToTop);
+  }
+  if (standaloneLogoLink) {
+    standaloneLogoLink.addEventListener('click', scrollToTop);
   }
 
   navBtns.forEach(btn => {
